@@ -13,46 +13,46 @@ let questions = [
     },
     {
         numb: 2,
-        question: "What does CSS stand for?",
-        answer: "Cascading Style Sheet",
+        question: "What does CSS control on a website?",
+        answer: "The site's presentation, layout and style",
         options: [
-            "Common Style Sheet",
-            "Colorful Style Sheet",
-            "Computer Style Sheet",
-            "Cascading Style Sheet"
+            "The site's database",
+            "The site's functionality",
+            "The site's content",
+            "The site's presentation, layout and style"
         ]
     },
     {
         numb: 3,
-        question: "What does PHP stand for?",
-        answer: "Hypertext Preprocessor",
+        question: "What company created iPhone?",
+        answer: "Apple",
         options: [
-            "Hypertext Preprocessor",
-            "Hypertext Programming",
-            "Hypertext Preprogramming",
-            "Hometext Preprocessor"
+            "Microsoft",
+            "Google",
+            "Apple",
+            "Samsung"
         ]
     },
     {
         numb: 4,
-        question: "What does SQL stand for?",
-        answer: "Structured Query Language",
+        question: "Which computer part stores long-term data?",
+        answer: "Hard Drive/SSD",
         options: [
-            "Stylish Question Language",
-            "Stylesheet Query Language",
-            "Statement Question Language",
-            "Structured Query Language"
+            "GPU",
+            "CPU",
+            "RAM",
+            "Hard Drive/SSD"
         ]
     },
     {
         numb: 5,
-        question: "What does XML stand for?",
-        answer: "Extensible Markup Language",
+        question: "What programming language uses print() to display text?",
+        answer: "Python",
         options: [
-            "eXtensible Markup Language",
-            "eXecutable Multiple Language",
-            "eXTra Multi Language",
-            "eXamine Multiple Language"
+            "Python",
+            "C++",
+            "JavaScript",
+            "Java"
         ]
     },
 ]
