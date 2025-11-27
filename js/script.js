@@ -25,7 +25,7 @@ continue_btn.onclick = () => {
     showQuestions(0);
     queCounter(1);
     startTimer(15);
-    startTimerLine(0);
+    startTimeLine(0)
 };
 
 let que_count = 0;
@@ -36,33 +36,11 @@ let timeValue = 15;
 let widthValue = 0;
 let userScore = 0;
 
+
 const next_btn = quiz_box.querySelector(".next_btn");
 const result_box = document.querySelector(".result_box");
 const restart_quiz = result_box.querySelector(".button .restart");
 const quit_quiz = result_box.querySelector(".buttons .result");
-
-restart_quiz.onclick = ()=>{
-    quiz_box.classList.add("activeQuiz");
-    result_box.classList.remove("activeResult");
-    let que_const = 0;
-    let que_numb = 1;
-    let timeValue = 15;
-    let widthValue = 0;
-    let userScore = 0;
-    showQuestions(que_count);
-    queCounter(que_numb);
-    clearInterval(counter);
-    startTimer(timeValue);
-    clearInterval(counterLine);
-    startTimerLine(widthValue);
-    next_btn.style.display = "none";
-    timeOff.textContent = "Time Left";
-
-}
-
-quit_quiz.onclick = ()=>{
-    window.location.reload();
-}
 
 
 // If the next button is clicked
@@ -74,15 +52,8 @@ next_btn.onclick = () => {
         queCounter(que_numb);
         clearInterval(counter);
         startTimer(timeValue);
-        clearInterval(counterLine);
-        startTimerLine(widthValue);
-        next_btn.style.display = "none";
-        timeOff.textContent = "Time Left";
     } else {
-        clearInterval(counter);
-        clearInterval(counterLine);
         console.log("Questions completed");
-        showResultBox();
     }
 };
 
@@ -121,9 +92,8 @@ function optionSelected(answer) {
     let userAns = answer.textContent;
     let correctAns = questions[que_count].answer;
     let allOptions = option_list.children.length;
+
     if (userAns == correctAns) {
-        userScore += 1;
-        console.log(userScore)
         answer.classList.add("correct");
         console.log("Answer is Correct");
         answer.insertAdjacentHTML("beforeend", tickIcon);
@@ -145,6 +115,13 @@ function optionSelected(answer) {
     for (let i = 0; i < allOptions; i++) {
         option_list.children[i].classList.add("disabled");
     }
+
+
+// Mark that the question has been answered
+    option_list.classList.add("answered");
+
+
+    // Show next button
     next_btn.style.display = "block";
 }
 
@@ -163,8 +140,10 @@ function showResultBox(){
     }
     else{
         let scoreTag = '<span>and sorry, You got only <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        scoreText.innerHTML = scoreTag;
     }
 }
+
 
 function startTimer(time) {
     counter = setInterval(timer, 1000);
@@ -177,13 +156,13 @@ function startTimer(time) {
         }
         if(time < 0){
             clearInterval(counter);
-            timeCount.textContent = "00";
+            timeCount.textContent = "00"
             timeOff.textContent = "Time Off";
-            
             let correctAns = questions[que_count].answer;
             let allOptions = option_list.children.length;
 
-            
+
+           
             for (let i = 0; i < allOptions; i++) {
                 if(option_list.children[i].textContent == correctAns){
                     option_list.children[i].setAttribute("class", "option correct");
@@ -208,14 +187,6 @@ function startTimerLine(time){
         }
     }
 }
-
-
-
-
-
-
-
-
 
 function queCounter(index) {
     const bottom_ques_counter = quiz_box.querySelector(".total_que");
