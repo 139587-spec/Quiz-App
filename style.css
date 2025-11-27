@@ -8,7 +8,7 @@
 }
 
 body {
-    background: #e13d7c
+    background: #ff87b5;
 }
 
 .start_btn,
@@ -36,7 +36,7 @@ body {
 .start_btn button {
     font-size: 25px;
     font-weight: 500;
-    color: #e13d7c;
+    color: #ff87b5;
     padding: 15px 30px;
     outline: none;
     border: none;
@@ -76,7 +76,7 @@ body {
 
 .info_box .info_list .info span {
     font-weight: 600;
-    color: #e13d7c;
+    color: #ff87b5;
 }
 
 .info_box .buttons {
@@ -93,7 +93,7 @@ body {
     height: 40px;
     width: 100px;
     outline: none;
-    border: 1px solid #e13d7c;
+    border: 1px solid #ff87b5;
     border-radius: 5px;
     color: #fff;
     font-size: 16px;
@@ -104,20 +104,20 @@ body {
 
 .buttons button.restart {
     color: #fff;
-    background: #e13d7c;
+    background: #ff87b5;
 }
 
 .button button.restart:hover {
-    background: #e13d7c;
+    background: #ff87b5;
 }
 
 .buttons button.quit {
-    color: #e13d7c;
+    color: #ff87b5;
 }
 
 .buttons button.quit:hover {
     color: #fff;
-    background: #e13d7c;
+    background: #ff87b5;
 }
 
 .quiz_box {
@@ -153,8 +153,8 @@ body {
     justify-content: space-between;
     width: 145px;
     height: 45px;
-    background: #cce5ff;
-    border: 1px solid #b8daff;
+    background: #ffe1f6;
+    border: 1px solid #f999dc;
     border-radius: 5px;
     padding: 0 8px;
 }
@@ -184,7 +184,7 @@ body {
     bottom: 0px;
     left: 0px;
     height: 3px;
-    background: red;
+    background: #f24c8c;
 }
 
 .quiz_box section {
@@ -203,8 +203,8 @@ body {
 }
 
 section .option_list .option {
-    background: aliceblue;
-    border: 1px solid #84c5fe;
+    background: #fffafe;
+    border: 1px solid #f896da;
     border-radius: 5px;
     padding: 8px 15px;
     margin-bottom: 15px;
@@ -298,15 +298,15 @@ footer .next_btn {
     border: none;
     outline:none;
     color: #fff;
-    background: #007bff;
+    background: #f76aa0;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid #d60e5a;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 footer .next_btn:hover {
-    background: #0263ca
+    background: #e34280;
 }
 
 .result_box {
@@ -326,7 +326,7 @@ footer .next_btn:hover {
 
 .result_box .icon {
     font-size: 100px;
-    color: #007bff;
+    color: #e9367b;
     margin-bottom: 10px;
 }
 
@@ -361,7 +361,7 @@ footer .next_btn:hover {
     font-size: 18px;
     font-weight: 500;
     border-radius: 5px;
-    border: 1px solid #e13d7c;
+    border: 2px solid #fb7daf;
     cursor: pointer;
     transition: all 0.3s ease;
 }

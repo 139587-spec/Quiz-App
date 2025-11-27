@@ -141,6 +141,7 @@ function optionSelected(answer) {
         answer.classList.add("correct");
         console.log("Answer is Correct");
         answer.insertAdjacentHTML("beforeend", tickIcon);
+        userScore++;
     } else {
         answer.classList.add("incorrect");
         console.log("Answer is Wrong");
